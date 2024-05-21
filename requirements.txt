@@ -1,0 +1,41 @@
+asyncio
+bs4
+extra_streamlit_components
+ffmpeg
+folium
+google-api-python-client
+ipython
+moviepy
+nest-asyncio
+numpy
+openai
+opencv-python-headless
+pandas
+pillow
+plotly
+pydub
+pygwalker
+pytube
+requests
+simple_salesforce
+streamlit
+streamlit-folium
+streamlit_elements
+streamlit_extras
+stripe
+supabase
+tavily-python
+temp
+urllib3
+youtube-transcript-api
+youtube_dl
+beautifulsoup4
+PyScrappy       #https://pypi.org/project/PyScrappy/
+webscraping     #https://docs.webscraping.com/en/latest/
+WebScraperAPI       #https://pypi.org/project/WebScraperAPI/
+Scrapy          #https://pypi.org/project/Scrapy/
+playwright
+scrapegraphai
+yelpapi
+ffmpeg
+googlemaps

@@ -1,0 +1,14 @@
+[server]
+maxUploadSize=1028
+
+[theme]
+base = "light"       
+primaryColor="#7ab3ba"
+secondaryBackgroundColor="#fbbb98"
+textColor="#442c5c"      
+backgroundColor = "#ffffff"      
+#errorColor = "#FF6B6B"           
+
+
+[client]
+showSidebarNavigation = false
