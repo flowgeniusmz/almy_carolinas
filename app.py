@@ -1,21 +1,29 @@
 import streamlit as st
-from classes import assistant_class as asst
+from config import pagesetup as ps, sessionstates as ss
+from classes import user_class
 
-st.set_page_config(page_title="AlmyAI", layout="wide", initial_sidebar_state="collapsed")
-assistant = asst.Assistant()
-thread_messages = assistant.initial_thread_messages
+# 1. Set Page Config
+st.set_page_config(page_title=st.secrets.appconfig.app_name, page_icon=st.secrets.appconfig.app_icon, layout=st.secrets.appconfig.app_layout, initial_sidebar_state=st.secrets.appconfig.app_initial_sidebar)
 
-chat_container = st.container(height=500, border=True)
-with chat_container:
-    for msg in thread_messages:
-        with st.chat_message(name=msg.role):
-            st.markdown(body=msg.content[0].text.value)
+ps.get_page_styling()
 
-if prompt := st.chat_input("Enter request here..."):
-    
-    with chat_container:
-        with st.chat_message(name="user"):
-            st.markdown(prompt)
-        response_message = assistant.run_assistant(prompt=prompt)
-        with st.chat_message("assistant"):
-            st.markdown(response_message)
+ps.display_background_image()
+
+# 2. Session States
+ss.initialize_session_states()
+
+# 3. Set Page Title
+ps.set_title_manual(varTitle="AlmyAI", varSubtitle="Login / Registration", varDiv=True)
+
+# 4. Initialize UserFlow
+user_flow = user_class.UserFlow()
+
+
+# 5. Execute UserFlow
+if not st.session_state.user['usertype_complete']:
+    user_flow.userflow1_usertype_form()
+elif not st.session_state.user['userauth_complete']:
+    user_flow.userflow2_userauth_form()
+else:
+    # Redirect to home page if the userflow is complete
+    ps.switch_to_homepage()

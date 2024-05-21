@@ -77,7 +77,7 @@ def get_pageconfig_title_with_home_link(varPageNumber: int, varDiv: bool=True):
 
 
 def set_title_manual(varTitle, varSubtitle, varDiv: bool=True):
-    st.markdown(f"""<span style="font-weight: bold; font-size: 2em; color:#4A90E2;">{varTitle} </span> <span style="font-weight: bold; color:#333333; font-size:1.3em;">{varSubtitle}</span>""", unsafe_allow_html=True)
+    st.markdown(f"""<span style="font-weight: bold; font-size: 2em; color:#7ab3ba;">{varTitle} </span> <span style="font-weight: bold; color:#333333; font-size:1.3em;">{varSubtitle}</span>""", unsafe_allow_html=True)
     if varDiv:
         st.divider()
         
@@ -142,7 +142,7 @@ def get_component_pagelinksection():
             get_component_pagelink_styled(3)
         with link_columns_row1[2]:
             get_component_pagelink_styled(2)
-            #get_component_pagelink_styled(4)
+            get_component_pagelink_styled(4)
 
 def get_component_pagelinksection_styled():
     link_container = st.container(border=False)
@@ -153,7 +153,7 @@ def get_component_pagelinksection_styled():
             get_component_pagelink_styled(3)
         with link_columns_row1[2]:
             get_component_pagelink_styled(2)
-            #get_component_pagelink_styled(4)
+            get_component_pagelink_styled(4)
 
 def get_component_pagelinksection_styled_popover():
     link_container = st.container(border=False)
@@ -165,7 +165,7 @@ def get_component_pagelinksection_styled_popover():
             #get_component_pagelink_styled_popover(5)
         with link_columns_row1[2]:
             get_component_pagelink_styled_popover(2)
-            #get_component_pagelink_styled_popover(4)
+            get_component_pagelink_styled_popover(4)
             
 
         
@@ -183,7 +183,7 @@ def get_component_overview(varPageNumber: int):
 
 def display_background_image():
     # Set the Streamlit image for branding as the background with transparency
-    background_image = "assets/logo/logo.png"
+    background_image = "https://almainc.com/sites/default/files/alma-nav-logo-r.svg"
     st.markdown(
         f"""
         <style>
@@ -198,7 +198,7 @@ def display_background_image():
 
 def display_background_image2():
     # Set the Streamlit image for branding as the background with transparency
-    background_image = "assets/logo/logo.png"
+    background_image = "https://almainc.com/sites/default/files/alma-nav-logo-r.svg"
     st.markdown(
         f"""
         <style>
@@ -217,7 +217,7 @@ def create_sidebar_nav(varPageNumber: int):
     st.sidebar.page_link(page=get_pageconfig_item(varPageNumber=1, varPageConfigType="paths"), label=get_pageconfig_item(varPageNumber=1, varPageConfigType="subtitles"), disabled=(varPageNumber == 1))
     st.sidebar.page_link(page=get_pageconfig_item(varPageNumber=2, varPageConfigType="paths"), label=get_pageconfig_item(varPageNumber=2, varPageConfigType="subtitles"), disabled=(varPageNumber == 2))
     st.sidebar.page_link(page=get_pageconfig_item(varPageNumber=3, varPageConfigType="paths"), label=get_pageconfig_item(varPageNumber=3, varPageConfigType="subtitles"), disabled=(varPageNumber == 3))
-    # st.sidebar.page_link(page=get_pageconfig_item(varPageNumber=4, varPageConfigType="paths"), label=get_pageconfig_item(varPageNumber=4, varPageConfigType="subtitles"), disabled=(varPageNumber == 4))
+    st.sidebar.page_link(page=get_pageconfig_item(varPageNumber=4, varPageConfigType="paths"), label=get_pageconfig_item(varPageNumber=4, varPageConfigType="subtitles"), disabled=(varPageNumber == 4))
     # st.sidebar.page_link(page=get_pageconfig_item(varPageNumber=5, varPageConfigType="paths"), label=get_pageconfig_item(varPageNumber=5, varPageConfigType="subtitles"), disabled=(varPageNumber == 5))
     # st.sidebar.page_link(page=get_pageconfig_item(varPageNumber=6, varPageConfigType="paths"), label=get_pageconfig_item(varPageNumber=6, varPageConfigType="subtitles"), disabled=(varPageNumber == 6))
 
@@ -261,7 +261,7 @@ def popover_menu(varPageNumber: int):
         st.page_link(page=get_pageconfig_item(varPageNumber=1, varPageConfigType="paths"), label=get_pageconfig_item(varPageNumber=1, varPageConfigType="subtitles"), disabled=(varPageNumber == 1))
         st.page_link(page=get_pageconfig_item(varPageNumber=2, varPageConfigType="paths"), label=get_pageconfig_item(varPageNumber=2, varPageConfigType="subtitles"), disabled=(varPageNumber == 2))
         st.page_link(page=get_pageconfig_item(varPageNumber=3, varPageConfigType="paths"), label=get_pageconfig_item(varPageNumber=3, varPageConfigType="subtitles"), disabled=(varPageNumber == 3))
-        # st.page_link(page=get_pageconfig_item(varPageNumber=4, varPageConfigType="paths"), label=get_pageconfig_item(varPageNumber=4, varPageConfigType="subtitles"), disabled=(varPageNumber == 4))
+        st.page_link(page=get_pageconfig_item(varPageNumber=4, varPageConfigType="paths"), label=get_pageconfig_item(varPageNumber=4, varPageConfigType="subtitles"), disabled=(varPageNumber == 4))
         # st.page_link(page=get_pageconfig_item(varPageNumber=5, varPageConfigType="paths"), label=get_pageconfig_item(varPageNumber=5, varPageConfigType="subtitles"), disabled=(varPageNumber == 5))
         
 def get_pageconfig_title_with_popmenu(varPageNumber: int, varDiv: bool=True):
